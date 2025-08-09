@@ -108,3 +108,12 @@ This project is licensed under the BSD-3-Clause-Clear License. See the [LICENSE]
 ---
 
 **Built with ❤️ by the Zama team**
+
+## Notes
+
+- compile contract: npx hardhat compile
+- test unit tests: npx hardhat test
+
+- contract address sepolia: 0xe5689DBDf5A4B830daE1Df71A52115A573819938
+
+- npx hardhat fhevm check-fhevm-compatibility --network sepolia --address 0xe5689DBDf5A4B830daE1Df71A52115A573819938
