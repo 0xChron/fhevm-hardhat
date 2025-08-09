@@ -1,81 +1,31 @@
-# FHEVM Hardhat Template
+# stealthdrop: FHEVM Private Token Distribution
 
-A Hardhat-based template for developing Fully Homomorphic Encryption (FHE) enabled Solidity smart contracts using the
-FHEVM protocol by Zama.
+<div align="center">
+  <img src="assets/stealthdrop-logo.png" alt="Logo" width="100"/>
+</div>
+<br>
 
-## Quick Start
+A Solidity smart contract that leverages Fully Homomorphic Encryption (FHE) to enable confidential token transfers and
+distributions on-chain. Designed for scenarios like airdrop campaigns, targeted wallet distributions, and other
+privacy-sensitive token allocations, it ensures that transfer amounts remain encrypted and hidden from public view while
+still being verifiable on the blockchain.
 
-For detailed instructions see:
-[FHEVM Hardhat Quick Start Tutorial](https://docs.zama.ai/protocol/solidity-guides/getting-started/quick-start-tutorial)
+## Sample UI
 
-### Prerequisites
-
-- **Node.js**: Version 20 or higher
-- **npm or yarn/pnpm**: Package manager
-
-### Installation
-
-1. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-2. **Set up environment variables**
-
-   ```bash
-   npx hardhat vars set MNEMONIC
-
-   # Set your Infura API key for network access
-   npx hardhat vars set INFURA_API_KEY
-
-   # Optional: Set Etherscan API key for contract verification
-   npx hardhat vars set ETHERSCAN_API_KEY
-   ```
-
-3. **Compile and test**
-
-   ```bash
-   npm run compile
-   npm run test
-   ```
-
-4. **Deploy to local network**
-
-   ```bash
-   # Start a local FHEVM-ready node
-   npx hardhat node
-   # Deploy to local network
-   npx hardhat deploy --network localhost
-   ```
-
-5. **Deploy to Sepolia Testnet**
-
-   ```bash
-   # Deploy to Sepolia
-   npx hardhat deploy --network sepolia
-   # Verify contract on Etherscan
-   npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
-   ```
-
-6. **Test on Sepolia Testnet**
-
-   ```bash
-   # Once deployed, you can run a simple test on Sepolia.
-   npx hardhat test --network sepolia
-   ```
+![alt text](assets/ui.png)
 
 ## 📁 Project Structure
 
 ```
 fhevm-hardhat-template/
-├── contracts/           # Smart contract source files
-│   └── FHECounter.sol   # Example FHE counter contract
-├── deploy/              # Deployment scripts
-├── tasks/               # Hardhat custom tasks
-├── test/                # Test files
-├── hardhat.config.ts    # Hardhat configuration
-└── package.json         # Dependencies and scripts
+├── contracts/
+│   └── MockERC20.sol
+│   └── PrivateTokenDistributor.sol
+├── deploy/
+├── tasks/
+├── test/
+├── hardhat.config.ts
+└── package.json
 ```
 
 ## 📜 Available Scripts
@@ -94,26 +44,3 @@ fhevm-hardhat-template/
 - [FHEVM Hardhat Setup Guide](https://docs.zama.ai/protocol/solidity-guides/getting-started/setup)
 - [FHEVM Testing Guide](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat/write_test)
 - [FHEVM Hardhat Plugin](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat)
-
-## 📄 License
-
-This project is licensed under the BSD-3-Clause-Clear License. See the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-- **GitHub Issues**: [Report bugs or request features](https://github.com/zama-ai/fhevm/issues)
-- **Documentation**: [FHEVM Docs](https://docs.zama.ai)
-- **Community**: [Zama Discord](https://discord.gg/zama)
-
----
-
-**Built with ❤️ by the Zama team**
-
-## Notes
-
-- compile contract: npx hardhat compile
-- test unit tests: npx hardhat test
-
-- contract address sepolia: 0xe5689DBDf5A4B830daE1Df71A52115A573819938
-
-- npx hardhat fhevm check-fhevm-compatibility --network sepolia --address 0xe5689DBDf5A4B830daE1Df71A52115A573819938
